@@ -35,7 +35,7 @@ def get_sql_data():
     from logs
     left join cohorts on logs.cohort_id= cohorts.id
     '''
-    
+
     #read in df from sql
     df = pd.read_sql(sql, url)
 
@@ -57,10 +57,14 @@ def cache_merged_data(cached=False):
         #Cache data
         df.to_csv('merged_data.csv')
 
+        return df
+
     else:
 
         #If csv file exists or cached == True, read in data from csv file.
         df = pd.read_csv('merged_data.csv', index_col=0)
+
+        return df
 
 #################################### Cohort Data ####################################
 
