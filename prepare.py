@@ -16,11 +16,18 @@ def prep_df(df):
 
     # drop column with nothing but null entries
     df = df.drop(columns=('deleted_at'))
-
     # drop id column given same info in cohort_id
     df = df.drop(columns=('id'))
-    
     # drop duplicate date column
-    df = df.drop(columns=('date'))
-    
+    df = df.drop(columns=('date'))w
+ 
+    #replace blank spaces and special characters
+    #df = df.replace(r'^\s*$', np.nan, regex=True)
+    #fill null values with 0
+    #df.fillna(0)   
+
+    #change datatype
+    #df.program_id = df.program_id.astype(int)
+    #df.cohort_id = df.cohort_id.astype(int)
+
     return df
