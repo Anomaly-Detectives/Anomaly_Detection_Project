@@ -1,5 +1,6 @@
 import pandas as pd
 from env import host, user, password
+import os
 
 #################################### TXT file ####################################
 
@@ -49,22 +50,16 @@ def cache_merged_data(cached=False):
     from Codeup database and caches it as a csv.
     If a csv already exists, it is pulled directly.
     '''
-    if cached == False or os.path.isfile('merged_data.csv') == False:
-
-        #Read fresh data from db into a DataFrame
-        df = get_sql_data()
-
-        #Cache data
-        df.to_csv('merged_data.csv')
-
-        return df
+    if os.path.isfile('merged_data.csv'):
+        df = pd.read_csv('merged_data.csv', index_col=0)
 
     else:
 
-        #If csv file exists or cached == True, read in data from csv file.
-        df = pd.read_csv('merged_data.csv', index_col=0)
+        #creates new csv if one does not already exist
+        df = get_sql_data()
+        df.to_csv('merged_data.csv')
 
-        return df
+    return df
 
 #################################### Cohort Data ####################################
 
