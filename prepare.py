@@ -19,15 +19,15 @@ def prep_df(df):
     # drop id column given same info in cohort_id
     df = df.drop(columns=('id'))
     # drop duplicate date column
-    df = df.drop(columns=('date'))w
- 
-    #replace blank spaces and special characters
-    #df = df.replace(r'^\s*$', np.nan, regex=True)
-    #fill null values with 0
-    #df.fillna(0)   
+    df = df.drop(columns=('date'))
+    # drop slack column, same as name column
+    df = df.drop(columns=('slack'))
+
+    #fill nulls with 0 
+    df = df.fillna(0)   
 
     #change datatype
-    #df.program_id = df.program_id.astype(int)
-    #df.cohort_id = df.cohort_id.astype(int)
+    df.program_id = df.program_id.astype(int)
+    df.cohort_id = df.cohort_id.astype(int)
 
     return df
