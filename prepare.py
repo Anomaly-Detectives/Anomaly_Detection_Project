@@ -11,17 +11,19 @@ def prep_df(df):
     df = df.fillna(0) 
 
     # convert all date objects to datetime
-    dt=['time', 'end_date', 'start_date', 'created_at', 'updated_at']
+    dt=['end_date', 'start_date', 'created_at', 'updated_at']
     df[dt] = df[dt].apply(pd.to_datetime)
 
-    # drop column with nothing but null entries
+    #drop column with nothing but null entries
     df = df.drop(columns=('deleted_at'))
-    # drop id column given same info in cohort_id
+    #drop id column given same info in cohort_id
     df = df.drop(columns=('id'))
-    # drop duplicate date column
+    #drop duplicate date column
     df = df.drop(columns=('date'))
-    # drop slack column, same as name column
+    #drop slack column, same as name column
     df = df.drop(columns=('slack'))
+    #drop time, not needed
+    df = df.drop(columns=('time'))
 
     #change datatype
     df.program_id = df.program_id.astype(int)
