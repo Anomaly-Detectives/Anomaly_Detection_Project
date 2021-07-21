@@ -7,8 +7,8 @@ def prep_df(df):
     df.date = pd.to_datetime(df.date)
     df = df.set_index(df.date)
 
-    # convert time column from object to datetime
-    df.time = pd.to_datetime(df.time)
+    #fill nulls with 0 
+    df = df.fillna(0) 
 
     # convert all date objects to datetime
     dt=['time', 'end_date', 'start_date', 'created_at', 'updated_at']
@@ -22,9 +22,6 @@ def prep_df(df):
     df = df.drop(columns=('date'))
     # drop slack column, same as name column
     df = df.drop(columns=('slack'))
-
-    #fill nulls with 0 
-    df = df.fillna(0)   
 
     #change datatype
     df.program_id = df.program_id.astype(int)
