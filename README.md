@@ -21,25 +21,41 @@ In this project, we sought to answer the following questions:
 
 <br>
 
-- 
+- Student who accessed curriculum  the least:
+
+| User_id      |   times accessed    |   Cohort      |  Program |
+|--------------|---------------------|---------------|----------|
+| 388          | 8                   |  31           | 2        | 
+| 812          | 7                   |  58           | 2        | 
+| 956          | 5                   |  139          | 2        | 
+| 278          | 4                   |  24           | 2        | 
+| 832          | 3                   |  62           | 2        | 
+| 679          | 3                   |  59           | 3        | 
+| 879          | 1                   |  135          | 2        | 
+
+
+    
+    ***These are the only users who accessed the curriculum less than 10 times***
+
+- program 2 (Java) seems to have the users that access curriculum the least
 
 <br>
 
 - The topics that post-graduates are continuing to access (by program) are:
     - Program 1 (PHP):
-        - homepage
-        - index
         - javascript-i
-
-    - Program 2 (Java):
-        - homepage
-        - javascript-i
+        - html-ss
         - spring
 
+    - Program 2 (Java):
+        - javascript-i
+        - spring
+        - html-ss
+
     - Program 3 (Data Science):
-        - homepage
-        - search_index
         - my_sql overview
+        - classification/overview
+        - classification/scale_features_or_not
 
 <br>
 
