@@ -70,4 +70,4 @@ In this project, we attempted to resolve several questions regarding anomalous a
     - capstone-workbook
     - professional-development/professionalism-101
     - 12-distributed-ml/4-acquire
-    - 10_Appendix_EntityLabeling']
+    - 10_Appendix_EntityLabeling
