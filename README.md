@@ -5,11 +5,10 @@ By: Alberto Puentes & Natasha Rivers
 In this project, we attempted to resolve several questions regarding anomalous acitivty in the curriculum log data.  Utilizing continuous/discrete probabilistic methods as well as methods to detect time series anomalies, we were able to navigate a dataframe of over 900,000 observations across 11 features and detect anamolous activity.   Our project goals were to address the following questions:
 
 1. Which lesson appears to attract the most traffic consistently across cohorts (per program)?
-2. Is there a cohort that referred to a lesson significantly more than other cohorts seemed to gloss over?
+2. Are there students who, when active, hardly access the curriculum? If so, what information do you have about these students?
 3. Is there any suspicious activity, such as users/machines/etc accessing the curriculum who shouldn’t be? Does it appear that any web-scraping is happening? Are there any suspicious IP addresses?
-4. Are there students who, when active, hardly access the curriculum? If so, what information do you have about these students?
-5. What topics are grads continuing to reference after graduation and into their jobs (for each program)?
-6. Which lessons are least accessed?
+4. What topics are grads continuing to reference after graduation and into their jobs (for each program)?
+5. Which lessons are least accessed?
 
 
 ### Takeaways:
